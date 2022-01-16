@@ -1,13 +1,33 @@
 Package: EDAhelperR
-Title: What the Package Does (One Line, Title Case)
+Title: Tools to make EDA easier!
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    c(person(given = "Vera",
+             family = "Cui",
+             email = "jinglu_cui@163.com",
+             role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0002-7873-312X")),
+      person(given = "Steven",
+             family = "Leung",
+             email = "example@email.com",
+             role = c("aut", "ctb"),
+             comment = c(ORCID = "ORCID")),
+      person(given = "Rowan",
+             family = "Sivanandam",
+             email = "example@email.com",
+             role = c("aut", "ctb"),
+             comment = c(ORCID = "ORCID")),
+      person(given = "Jennifer",
+             family = "Hoang",
+             email = "example@email.com",
+             role = c("aut", "ctb"),
+             comment = c(ORCID = "ORCID")))
+Description: This package is aimed at making the EDA process more effective within following functions: 1. To clean the data and replace missing values by using the method preferred; 2. To provide the description of the data such as the distribution of each column of the data, 3. To give the correlation plot between different columns and omit the pairs that are not significantly correlated; 4. To combine the plots and make them suitable for the report.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
