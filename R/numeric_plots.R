@@ -1,6 +1,3 @@
-library(roxygen2)
-library(GGally)
-
 #' Generate scattered plot matrix of numeric features for EDA
 #'
 #' @param df A data.frame
@@ -12,6 +9,6 @@ library(GGally)
 #' @examples
 #' numeric_plots(df)
 numeric_plots <- function(df){
-
+  print("numeric_plots is here.")
 }
 
