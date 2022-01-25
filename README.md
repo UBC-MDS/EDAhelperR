@@ -38,9 +38,16 @@ following functions:
     with missing values. There are 5 imputation methods provided (NULL,
     ‘most_frequent’, ‘mean’, ‘median’, ‘constant’). Finally, it will
     return the processed data as a tibble.
-2.  *Need to add*
-3.  *Need to add*
-4.  *Need to add*
+2.  `column_stats()` :<br> The function is to obtain summary statistics
+    of column(s) including count, mean, median, mode, Q1, Q3, variance,
+    standard deviation, correlation, and covariance in table format.
+    Finally, it will return a tibble.
+3.  `numeric_plots()` :<br> The function is to generate scattered plot
+    matrix of numeric features for EDA. Finally, it will return a GGally
+    plot object with the scattered plot matrix of numeric features.
+4.  `plot_histogram(data, columns, num_bins = 30)` :<br> The function is
+    to create histograms for numerical features within a dataframe using
+    ggplot2. Finally, it will return a ggplot object.
 
 ## Related projects
 
