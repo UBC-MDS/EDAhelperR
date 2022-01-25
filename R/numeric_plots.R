@@ -9,6 +9,20 @@
 #' @examples
 #' numeric_plots(df)
 numeric_plots <- function(df){
-  print("numeric_plots is here.")
+  if (!is.data.frame(df)) {
+    stop("df must be a data.frame.")
+  }
+  if (nrow(df) == 0){
+    stop("df must have at least 1 row.")
+  }
+
+  df_numeric <- df |>
+    dplyr::select_if(is.numeric)
+
+  if (ncol(df_numeric) < 2){
+    stop("df must have at least 2 numeric columns.")
+  }
+
+  GGally::ggpairs(df_numeric)
 }
 
