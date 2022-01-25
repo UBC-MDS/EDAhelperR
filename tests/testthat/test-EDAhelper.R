@@ -1,3 +1,17 @@
+#' Create the expected data frame for tests
+#'
+#' @param case
+#' case = 2 : expected data frame for method = 'mean'
+#' case = 3 : expected data frame for method = 'median'
+#' case = 4 : expected data frame for method = 'most_frequent'
+#' case = 5 : expected data frame for method = 'constant'
+#' case = 6 : expected data frame for method = 'constant' & fill_value = 9999
+#'
+#' @return data.frame
+#' @export
+#'
+#' @examples
+#' get_expected_results(2)
 get_expected_results <- function(case){
   if (case == 2){
     out <- data.frame(col_1 = c(1.25, 1.0, 1.0, 3.0, 0.0),
