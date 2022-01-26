@@ -7,6 +7,10 @@
 #' @export
 #'
 #' @examples
+#' df <- data.frame(names=c("Vera", "Jennifer", "Rowan", "Steven"),
+#'   scores =c(90, 80, 70, 80),
+#'   age=c(12, 23, 20, 100))
+#'
 #' numeric_plots(df)
 numeric_plots <- function(df){
   if (!is.data.frame(df)) {
