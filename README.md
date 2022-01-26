@@ -70,8 +70,9 @@ You can install the released version of `EDAhelperR` from this repo:<br>
 Example usage:
 
     library(EDAhelperR)
+
     preprocess(readr::readr_example("mtcars.csv"))
-    
+
     numeric_plots(df)
 
 ## Contributing
