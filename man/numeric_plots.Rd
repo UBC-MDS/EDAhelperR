@@ -17,5 +17,9 @@ features.
 Generate scattered plot matrix of numeric features for EDA
 }
 \examples{
+df <- data.frame(names=c("Vera", "Jennifer", "Rowan", "Steven"),
+  scores =c(90, 80, 70, 80),
+  age=c(12, 23, 20, 100))
+
 numeric_plots(df)
 }
