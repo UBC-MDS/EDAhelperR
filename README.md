@@ -71,6 +71,8 @@ Example usage:
 
     library(EDAhelperR)
     preprocess(readr::readr_example("mtcars.csv"))
+    
+    numeric_plots(df)
 
 ## Contributing
 
