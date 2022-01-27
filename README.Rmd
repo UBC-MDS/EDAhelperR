@@ -62,7 +62,10 @@ devtools::install_github('UBC-MDS/EDAhelperR')
 Example usage:
 ```
 library(EDAhelperR)
+
 preprocess(readr::readr_example("mtcars.csv"))
+
+numeric_plots(df)
 ```
 
 ## Contributing
