@@ -1,6 +1,4 @@
 
-library(modeest)
-library(dplyr)
 
 #' Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, 
 #'variance, standard deviation, correlation, and covariance in table format.
