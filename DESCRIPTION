@@ -37,4 +37,5 @@ Imports:
     readr,
     ggplot2,
     tidyr,
-    rlang
+    rlang,
+    GGally
