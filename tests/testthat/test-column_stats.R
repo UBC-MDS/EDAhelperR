@@ -1,5 +1,5 @@
 data <- iris
-columns = c('Sepal.Length', 'Sepal.Width', 'Petal.Length')
+columns <- c('Sepal.Length', 'Sepal.Width', 'Petal.Length')
 
 test_that("The number of columns in summary table is correct.", {
   expect_equal(NCOL(column_stats(data, columns)[[1]]), 8)
