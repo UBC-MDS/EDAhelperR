@@ -35,7 +35,7 @@ column_stats <- function(data, columns){
     rownames(summary_stats) <- columns
     colnames(summary_stats) <- c('Count', 'Mean', 'Median', 'Mode', 'Q1', 'Q3', 'Var', 'Stdev')
     
-    covmatrix <- cov(data |> select(all_of(columns)))
+    covmatrix <- cov(data |> dplyr::select(all_of(columns)))
 
     corrmatrix <- cor(data |> dplyr::select(all_of(columns)))
     return(list(summary_stats, covmatrix, corrmatrix))
