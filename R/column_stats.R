@@ -15,6 +15,13 @@ library(dplyr)
 #' @examples
 
 column_stats <- function(data, columns){
+    if (!is.data.frame(data)) {
+        stop("First input must be a data.frame.")
+        }
+    if (!is.vector(columns) && !is.atomic(columns)) {
+          stop("Columns argument should be a vector")
+        }
+    
     summary_stats <- c()
     for (column in columns){
         new_row <- c(NROW(data[[column]]),
