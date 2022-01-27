@@ -34,4 +34,7 @@ Config/testthat/edition: 3
 Imports: 
     dplyr,
     stats,
-    readr
+    readr,
+    ggplot2,
+    tidyr,
+    rlang

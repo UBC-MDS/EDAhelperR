@@ -4,13 +4,13 @@
 \alias{plot_histogram}
 \title{Creates histograms for numerical features within a dataframe using ggplot2}
 \usage{
-plot_histogram(data, columns, num_bins = 30)
+plot_histogram(data, columns = "all", num_bins = 30)
 }
 \arguments{
 \item{data}{A dataframe}
 
 \item{columns}{A list of numerical features for which to create histograms,
-or by default will plot all numerical features in dataframe.}
+or by default, plots all numerical features in the dataframe.}
 
 \item{num_bins}{Integer. Number of bins per histogram plot, default is 30 bins.}
 }
@@ -19,4 +19,8 @@ ggplot object
 }
 \description{
 Creates histograms for numerical features within a dataframe using ggplot2
+}
+\examples{
+plot_histogram(iris)
+plot_histogram(iris, columns = c("Petal.Length", "Petal.Width"), num_bins = 40)
 }
