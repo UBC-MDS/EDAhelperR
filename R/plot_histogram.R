@@ -14,27 +14,24 @@ plot_histogram <- function(data, columns = "all", num_bins = 30) {
   if (!is.data.frame(data))
     stop("data must be a data frame.")
   if (!is.vector(columns))
-    stop("columns must be a vector of column names within data frame.")
+    stop("columns must be a character vector")
   if (!is.numeric(num_bins))
     stop("num_bins must be a numeric value.")
 
-  # Select columns from data
-  if (columns == "all"){
+  if (columns[1] == "all") {
     plot_data <- data |>
-      dplyr::select_if(is.numeric)
-    columns <- colnames(plot_data)
+      dplyr::select_if(is.numeric) |>
+      tidyr::pivot_longer(dplyr::everything())
   } else {
     plot_data <- data |>
-      dplyr::select(columns)
+      dplyr::select(any_of(columns)) |>
+      tidyr::pivot_longer(dplyr::everything())
   }
 
   # Generate plots
-  plot_list <- list()
-
-  for (i in seq_along(plot_data)) {
-    plot_list[[i]] <- ggplot2::ggplot(plot_data, aes(x = columns[i])) +
-      geom_histogram(bins = num_bins)
-  }
-  cowplot::plot_grid(plotlist = plot_list, ncol = 3)
+  ggplot2::ggplot(plot_data, aes(x = value)) +
+    ggplot2::geom_histogram(bins = num_bins, fill = "steelblue") +
+    ggplot2::facet_wrap(~name, ncol = 3, scales = "free") +
+    ggplot2::labs(x = "Value", y = "Count")
 }
 
