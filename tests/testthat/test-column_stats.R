@@ -1,4 +1,4 @@
-data = iris
+data <- iris
 columns = c('Sepal.Length', 'Sepal.Width', 'Petal.Length')
 
 test_that("The number of columns in summary table is correct.", {
