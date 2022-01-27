@@ -36,4 +36,5 @@ Imports:
     stats,
     readr,
     ggplot2,
-    tidyr
+    tidyr,
+    rlang

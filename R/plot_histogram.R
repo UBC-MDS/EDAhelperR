@@ -27,12 +27,12 @@ plot_histogram <- function(data, columns = "all", num_bins = 30) {
       tidyr::pivot_longer(dplyr::everything())
   } else {
     plot_data <- data |>
-      dplyr::select(any_of(columns)) |>
+      dplyr::select(dplyr::any_of(columns)) |>
       tidyr::pivot_longer(dplyr::everything())
   }
 
   # Generate facet plots
-  ggplot2::ggplot(plot_data, ggplot2::aes(x = value)) +
+  ggplot2::ggplot(plot_data, ggplot2::aes(x = plot_data$value)) +
     ggplot2::geom_histogram(bins = num_bins, fill = "steelblue") +
     ggplot2::facet_wrap(~name, ncol = 3, scales = "free") +
     ggplot2::labs(x = "Value", y = "Count")
