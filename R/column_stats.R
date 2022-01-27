@@ -39,6 +39,6 @@ column_stats <- function(data, columns){
     
     covmatrix <- cov(data |> select(all_of(columns)))
 
-    corrmatrix <- cor(data |> select(all_of(columns)))
+    corrmatrix <- cor(data |> dplyr::select(all_of(columns)))
     return(list(summary_stats, covmatrix, corrmatrix))
 }
