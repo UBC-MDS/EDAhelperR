@@ -38,4 +38,5 @@ Imports:
     ggplot2,
     tidyr,
     rlang,
-    GGally
+    GGally,
+    modeest
