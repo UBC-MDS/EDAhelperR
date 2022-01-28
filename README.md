@@ -49,6 +49,7 @@ following functions:
     function is to create histograms for numerical features within a
     dataframe using ggplot2. Finally, it will return a ggplot object.
 
+
 ## Related projects
 
 Surely, EDA is not a new topic to data scientists. There are quite a few
@@ -83,7 +84,7 @@ Example usage:
     column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
 
     numeric_plots(df)
-
+    
     plot_histogram(mtcars)
 
 ## Contributing
