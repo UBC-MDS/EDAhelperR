@@ -6,7 +6,7 @@ test_that("Check for non-dataframe argument works.", {
 })
 
 test_that("Check for non-vector argument works.", {
-  expect_error(column_stats(data, 'A')))
+  expect_error(column_stats(data, 'A'))
 })
 
 test_that("The number of columns in summary table is correct.", {
