@@ -74,6 +74,7 @@ Example usage:
 
     library(EDAhelperR)
     preprocess(readr::readr_example("mtcars.csv"))
+    column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
 
 ## Contributing
 
