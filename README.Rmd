@@ -53,7 +53,7 @@ Surely, EDA is not a new topic to data scientists. There are quite a few package
 
 
 ## Installation
-You can install the released version of `EDAhelperR` from this repo:<br>
+You can install the released version of `EDAhelperR` from this repo at the R console:<br>
 ```
 devtools::install_github('UBC-MDS/EDAhelperR')
 ```
