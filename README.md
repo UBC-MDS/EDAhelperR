@@ -73,8 +73,14 @@ You can install the released version of `EDAhelperR` from this repo:<br>
 Example usage:
 
     library(EDAhelperR)
+
     preprocess(readr::readr_example("mtcars.csv"))
+    
     column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
+    
+    numeric_plots(df)
+    
+    plot_histogram(mtcars)
 
 ## Contributing
 

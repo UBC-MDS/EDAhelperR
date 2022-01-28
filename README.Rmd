@@ -37,9 +37,12 @@ This package is aimed at making the EDA process more effective. Basically, we fo
 ## Feature specifications
 1. `preprocess(path, method=NULL, fill_value=NULL, read_func=readr::read_csv, ...)` :<br>
 The function is to preprocess data in txt or csv by dealing with missing values. There are 5 imputation methods provided (NULL, 'most_frequent', 'mean', 'median', 'constant'). Finally, it will return the processed data as a tibble.
-2. _Need to add_
-3. _Need to add_
-4. _Need to add_
+2.  `column_stats()` :<br>
+The function is to obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, variance, standard deviation, correlation, and covariance in table format. Finally, it will return a tibble.
+3.  `numeric_plots()` :<br>
+The function is to generate scattered plot matrix of numeric features for EDA. Finally, it will return a GGally plot object with the scattered plot matrix of numeric features.
+4.  `plot_histogram(data, columns = "all", num_bins = 30)` :<br>
+The function is to create histograms for numerical features within a dataframe using ggplot2. Finally, it will return a ggplot object.
 
 ## Related projects
 Surely, EDA is not a new topic to data scientists. There are quite a few packages doing similar work on [`CRAN`](https://cran.r-project.org/web/packages/available_packages_by_name.html). However, most of them only include limited functions like just providing descriptive statistics. Our proposal is more of a one-in-all toolkit for EDA. Below is a list of sister-projects.
@@ -59,7 +62,10 @@ devtools::install_github('UBC-MDS/EDAhelperR')
 Example usage:
 ```
 library(EDAhelperR)
+
 preprocess(readr::readr_example("mtcars.csv"))
+numeric_plots(df)
+plot_histogram(mtcars)
 ```
 
 ## Contributing
