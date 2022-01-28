@@ -12,6 +12,7 @@ library(dplyr)
 #' @export
 #' 
 #' @examples
+#' column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
 
 column_stats <- function(data, columns){
     if (!is.data.frame(data)) {
