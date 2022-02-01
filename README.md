@@ -4,6 +4,9 @@
 # EDAhelperR
 
 <!-- badges: start -->
+
+[![codecov](https://codecov.io/gh/UBC-MDS/EDAhelperR/branch/main/graph/badge.svg?token=VR6nicI5t8)](https://codecov.io/gh/UBC-MDS/EDAhelperR)
+[![R-CMD-check](https://github.com/UBC-MDS/EDAhelperR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/EDAhelperR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Tools to make EDA easier!
