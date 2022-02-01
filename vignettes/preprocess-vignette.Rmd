@@ -1,0 +1,46 @@
+---
+title: "Using preprocess"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plot_histogram-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`preprocess` can be used to read data in different formats such as txt, json, csv and return the data as a data  frame. To use preprocess in a project:
+```{r setup}
+library(EDAhelperR)
+library(knitr)
+```
+
+## Read csv data from buffer
+```{r, message=FALSE, warning=FALSE}
+file_path = "https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv"
+df = preprocess(file_path)
+kable(df[3:6, 3:6])
+```
+## Read local data
+```{r, message=FALSE, warning=FALSE}
+file_path = readr::readr_example("mtcars.csv")
+df = preprocess(file_path)
+kable(df[3:6, 3:6])
+```
+## Read data with different methods to dealing with missing values
+```{r, message=FALSE, warning=FALSE}
+file_path = readr::readr_example("mtcars.csv")
+df = preprocess(file_path, method = "mean")
+kable(head(df))
+```
+## Read data with extra `readr` settings
+```{r, message=FALSE, warning=FALSE}
+file_path = readr::readr_example("mtcars.csv")
+df = preprocess(file_path, method = "mean", skip = 6, col_names = colnames(df))
+kable(head(df))
+```
