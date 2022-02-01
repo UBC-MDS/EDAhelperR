@@ -2,9 +2,9 @@
 title: "Using preprocess"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{plot_histogram-vignette}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  %\VignetteIndexEntry{preprocess-vignette}
+  %\VignetteEngine{knitr::knitr}
+  %\VignetteEncoding{UTF-8}{inputenc}
 ---
 
 ```{r, include = FALSE}
