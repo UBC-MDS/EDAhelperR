@@ -41,4 +41,5 @@ Imports:
     rlang,
     GGally,
     modest,
-    statip
+    statip,
+    tidyselect

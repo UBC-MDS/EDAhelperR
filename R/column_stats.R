@@ -23,19 +23,19 @@ column_stats <- function(data, columns){
     for (column in columns){
         new_row <- c(NROW(data[[column]]),
                      round(mean(data[[column]], na.rm = TRUE), 3),
-                     median(data[[column]]),
+                     stats::median(data[[column]]),
                      statip::mfv(data[[column]]),
-                     quantile(data[[column]], 0.25),
-                     quantile(data[[column]], 0.75),
-                     round(var(data[[column]], na.rm = TRUE), 3),
-                     sd(data[[column]], na.rm = TRUE))
+                     stats::quantile(data[[column]], 0.25),
+                     stats::quantile(data[[column]], 0.75),
+                     round(stats::var(data[[column]], na.rm = TRUE), 3),
+                     stats::sd(data[[column]], na.rm = TRUE))
         summary_stats <- rbind(summary_stats, new_row)
         }
     rownames(summary_stats) <- columns
     colnames(summary_stats) <- c('Count', 'Mean', 'Median', 'Mode', 'Q1', 'Q3', 'Var', 'Stdev')
 
-    covmatrix <- cov(data |> dplyr::select(all_of(columns)))
+    covmatrix <- stats::cov(data |> dplyr::select(tidyselect::all_of(columns)))
 
-    corrmatrix <- cor(data |> dplyr::select(all_of(columns)))
+    corrmatrix <- stats::cor(data |> dplyr::select(tidyselect::all_of(columns)))
     return(list(summary_stats, covmatrix, corrmatrix))
 }
