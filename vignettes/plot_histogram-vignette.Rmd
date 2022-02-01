@@ -1,0 +1,40 @@
+---
+title: "Using plot_histogram"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plot_histogram-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(EDAhelperR)
+data <- iris
+```
+
+## Create histograms for all numeric columns
+
+The function `plot_histogram` will generate histograms for all numeric columns in a given data frame by default.
+```{r}
+plot_histogram(data)
+```
+
+## Create histogram for specific columns
+Specific columns in the data frame can be plotted by assigning a character vector of column names to the `columns` argument.
+```{r}
+plot_histogram(data, columns = c("Sepal.Length", "Sepal.Width"))
+```
+
+
+## Adjust number of bins on plot
+The number of bins on the plot can be adjusted by providing a numeric value to the `num_bins` argument.
+```{r}
+plot_histogram(data, columns = c("Sepal.Length", "Sepal.Width"), num_bins = 20)
+```
