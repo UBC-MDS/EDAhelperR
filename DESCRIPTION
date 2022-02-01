@@ -39,4 +39,5 @@ Imports:
     tidyr,
     rlang,
     GGally,
-    modeest
+    modest,
+    statip

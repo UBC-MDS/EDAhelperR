@@ -24,7 +24,7 @@ column_stats <- function(data, columns){
         new_row <- c(NROW(data[[column]]),
                      round(mean(data[[column]], na.rm = TRUE), 3),
                      median(data[[column]]),
-                     modeest::mfv(data[[column]]),
+                     statip::mfv(data[[column]]),
                      quantile(data[[column]], 0.25),
                      quantile(data[[column]], 0.75),
                      round(var(data[[column]], na.rm = TRUE), 3),
