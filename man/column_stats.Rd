@@ -7,7 +7,7 @@ variance, standard deviation, correlation, and covariance in table format.
 Parameters}{
 }}
 \usage{
-column_stats()
+column_stats(data, columns)
 }
 \arguments{
 \item{data}{A data set from which columns will be selected}
@@ -23,4 +23,7 @@ three pd.DataFrames
 variance, standard deviation, correlation, and covariance in table format.
 Parameters}{
 }
+}
+\examples{
+column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
 }
