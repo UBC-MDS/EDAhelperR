@@ -1,8 +1,8 @@
 ---
-title: "Using numeric_plots"
+title: "numeric_plots"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{numeric_plots-vignette}
+  %\VignetteIndexEntry{numeric_plots}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}{inputenc}
 ---
