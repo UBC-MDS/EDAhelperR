@@ -1,0 +1,29 @@
+---
+title: "column_stats"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{column_stats-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}{inputenc}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`column_stats` can be used to obtain summary statistics of column(s) in a data set including count, mean, median, mode, Q1, Q3, variance, standard deviation, correlation, and covariance in table format.  To use `column_stats` in a project:
+```{r setup}
+library(EDAhelperR)
+library(knitr)
+```
+
+## Generate a dataframe of summary statistics, a correlation matrix, and a covariance matrix
+```{r, message=FALSE, warning=FALSE}
+data <- iris
+columns <- c('Sepal.Length', 'Sepal.Width', 'Petal.Length')
+
+column_stats(data, columns)
+```
