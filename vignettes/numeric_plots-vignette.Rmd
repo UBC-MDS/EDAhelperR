@@ -17,7 +17,6 @@ knitr::opts_chunk$set(
 `numeric_plots` takes a dataframe and plots the possible pairs of the numeric columns using Altair, creating a matrix of correlation scattered plots.  To use `numeric_plots` in a project:
 ```{r setup}
 library(EDAhelperR)
-library(knitr)
 ```
 
 ## Generate a matrix of scattered plots
