@@ -1,0 +1,30 @@
+---
+title: "Using numeric_plots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{numeric_plots-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}{inputenc}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`numeric_plots` takes a dataframe and plots the possible pairs of the numeric columns using Altair, creating a matrix of correlation scattered plots.  To use `numeric_plots` in a project:
+```{r setup}
+library(EDAhelperR)
+```
+
+## Generate a matrix of scattered plots
+```{r, message=FALSE, warning=FALSE}
+df <- data.frame(names=c("Vera", "Jennifer", "Rowan", "Steven"),
+  scores =c(90, 80, 70, 80),
+  age=c(12, 23, 20, 100))
+
+numeric_plots(df)
+```
+

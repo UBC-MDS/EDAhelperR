@@ -4,6 +4,9 @@
 # EDAhelperR
 
 <!-- badges: start -->
+
+[![codecov](https://codecov.io/gh/UBC-MDS/EDAhelperR/branch/main/graph/badge.svg?token=VR6nicI5t8)](https://codecov.io/gh/UBC-MDS/EDAhelperR)
+[![R-CMD-check](https://github.com/UBC-MDS/EDAhelperR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/UBC-MDS/EDAhelperR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Tools to make EDA easier!
@@ -38,12 +41,16 @@ following functions:
     with missing values. There are 5 imputation methods provided (NULL,
     ‘most_frequent’, ‘mean’, ‘median’, ‘constant’). Finally, it will
     return the processed data as a tibble.
-2.  `column_stats(data, columns)` 
-    : <br> The function is to obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, variance, standard deviation, correlation, and covariance in table format. Finally, it will return a tibble.
-3.  `numeric_plots()` 
-    : <br> The function is to generate scattered plot matrix of numeric features for EDA. Finally, it will return a GGally plot object with the scattered plot matrix of numeric features.
-4.  `plot_histogram(data, columns, num_bins = 30)` 
-    : <br> The function is to create histograms for numerical features within a dataframe using ggplot2. Finally, it will return a ggplot object.
+2.  `column_stats(data, columns)` :<br> The function is to obtain
+    summary statistics of column(s) including count, mean, median, mode,
+    Q1, Q3, variance, standard deviation, correlation, and covariance in
+    table format. Finally, it will return a tibble.
+3.  `numeric_plots(df)` :<br> The function is to generate scattered plot
+    matrix of numeric features for EDA. Finally, it will return a GGally
+    plot object with the scattered plot matrix of numeric features.
+4.  `plot_histogram(data, columns = "all", num_bins = 30)` :<br> The
+    function is to create histograms for numerical features within a
+    dataframe using ggplot2. Finally, it will return a ggplot object.
 
 ## Related projects
 
@@ -64,7 +71,8 @@ EDA. Below is a list of sister-projects.
 
 ## Installation
 
-You can install the released version of `EDAhelperR` from this repo:<br>
+You can install the released version of `EDAhelperR` from this repo at
+the R console:<br>
 
     devtools::install_github('UBC-MDS/EDAhelperR')
 
@@ -75,11 +83,11 @@ Example usage:
     library(EDAhelperR)
 
     preprocess(readr::readr_example("mtcars.csv"))
-    
+
     column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
-    
+
     numeric_plots(df)
-    
+
     plot_histogram(mtcars)
 
 ## Contributing

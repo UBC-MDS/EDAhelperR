@@ -2,12 +2,10 @@
 % Please edit documentation in R/column_stats.R
 \name{column_stats}
 \alias{column_stats}
-\title{\subsection{Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3,
-variance, standard deviation, correlation, and covariance in table format.
-Parameters}{
-}}
+\title{Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3,
+variance, standard deviation, correlation, and covariance in table format.}
 \usage{
-column_stats()
+column_stats(data, columns)
 }
 \arguments{
 \item{data}{A data set from which columns will be selected}
@@ -19,8 +17,9 @@ column_stats()
 three pd.DataFrames
 }
 \description{
-\subsection{Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3,
+Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3,
 variance, standard deviation, correlation, and covariance in table format.
-Parameters}{
 }
+\examples{
+column_stats(iris, c('Sepal.Length', 'Sepal.Width', 'Petal.Length'))
 }

@@ -9,7 +9,7 @@ Authors@R:
              comment = c(ORCID = "0000-0002-7873-312X")),
       person(given = "Steven",
              family = "Leung",
-             email = "example@email.com",
+             email = "klsleung@student.ubc.ca",
              role = c("aut", "ctb"),
              comment = c(ORCID = "ORCID")),
       person(given = "Rowan",
@@ -29,6 +29,9 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
@@ -39,4 +42,7 @@ Imports:
     tidyr,
     rlang,
     GGally,
-    modeest
+    modest,
+    statip,
+    tidyselect,
+VignetteBuilder: knitr
