@@ -1,6 +1,6 @@
 Package: EDAhelperR
 Title: Tools to make EDA easier!
-Version: 1.0.0
+Version: 1.0.2
 Authors@R: 
     c(person(given = "Vera",
              family = "Cui",
