@@ -1,0 +1,10 @@
+pandoc: 2.14.0.3
+pkgdown: 2.0.2
+pkgdown_sha: ~
+articles:
+  column_stats-vignette: column_stats-vignette.html
+  numeric_plots-vignette: numeric_plots-vignette.html
+  plot_histogram-vignette: plot_histogram-vignette.html
+  preprocess-vignette: preprocess-vignette.html
+last_built: 2022-02-03T04:13Z
+
