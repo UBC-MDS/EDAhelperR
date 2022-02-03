@@ -24,5 +24,8 @@ test_that("Expect errors when function arguments input incorrectly", {
   expect_error(
     plot_histogram(data = iris, columns = list("Petal.Length", "Petal.Width"))
   )
+  expect_error(
+    plot_histogram(data = iris, columns = 1)
+  )
   expect_error(plot_histogram(data = iris, num_bins = "forty"))
 })

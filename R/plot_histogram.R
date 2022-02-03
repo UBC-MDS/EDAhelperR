@@ -15,7 +15,7 @@ plot_histogram <- function(data, columns = "all", num_bins = 30) {
   # Exception handling
   if (!is.data.frame(data))
     stop("data must be a data frame.")
-  if (!is.vector(columns))
+  if (!is.character(columns))
     stop("columns must be a character vector")
   if (!is.numeric(num_bins))
     stop("num_bins must be a numeric value.")
